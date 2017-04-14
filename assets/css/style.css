@@ -1,0 +1,20 @@
+.title {
+	text-align: center;
+}
+
+.rules {
+	padding: 50px 150px 50px 150px;
+}
+
+/*.random {
+	width: 200px;
+	text-align: center;
+	border: solid;
+	border-width: 1px;
+}
+.score {
+	width: 200px;
+	text-align: center;
+	border: solid;
+	border-width: 1px; 
+}
