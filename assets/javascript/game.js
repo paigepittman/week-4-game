@@ -47,11 +47,11 @@ console.log(redPoints);
 
 start();
 
-$("red-crystal").on("click", function() {
+$("#red-crystal").on("click", function() {
 
-	score + redPoints;
+	score = redPoints + score;
 
-	$("score").html(score + redPoints);
+	$("score").html(redPoints + score);
 
 // if score === random, wins ++, reset
 
@@ -60,17 +60,19 @@ $("red-crystal").on("click", function() {
 		wins ++
 
 		reset();
+	}
 
-	if (score > random) {
+	else if (score > random) {
 
 		losses ++
 
 		reset();
 	}
 
+console.log(score);
 
+	})
 
-	}
 
 // if score > random, losses ++, reset
 
@@ -97,7 +99,7 @@ function reset() {
 	$("random").empty();
 
 }
-});
+;
 
 
 
