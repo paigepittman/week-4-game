@@ -30,6 +30,7 @@ function start() {
 	random = Math.floor(Math.random() * (maxrand - minrand + 1)) + minrand;
 
 // generate 4 random numbers between 1-12
+
 	redPoints = Math.floor(Math.random() * (max - min + 1)) + min;
 
 	bluePoints = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -50,13 +51,52 @@ $("red-crystal").on("click", function() {
 
 	score + redPoints;
 
+	$("score").html(score + redPoints);
+
 // if score === random, wins ++, reset
 
-	if ()
+	if (score === random) {
+
+		wins ++
+
+		reset();
+
+	if (score > random) {
+
+		losses ++
+
+		reset();
+	}
+
+
+
+	}
 
 // if score > random, losses ++, reset
 
+
+
 })
+
+function reset() {
+
+	score = 0;
+
+	random = "";
+
+	redPoints = "";
+
+	bluePoints = "";
+
+	yellowPoints = "";
+
+	greenPoints = "";
+
+	$("score").empty();
+
+	$("random").empty();
+
+}
 });
 
 
