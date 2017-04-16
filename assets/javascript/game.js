@@ -47,6 +47,8 @@ function start() {
 
 	greenPoints = Math.floor(Math.random() * (max - min + 1)) + min;
 
+	$(".random").html(random);
+
 // assign those numbers to images 
 
 
@@ -66,21 +68,24 @@ $("#pink-crystal").on("click", function() {
 	$(".points-box").html(score);
 
 
-	if (score === random) {
+	if (score > random) {
+
+		losses ++
+
+		reset();
+	}
+
+	else if (score === random) {
 
 		wins ++
 
 		reset();
 	}
 
-	else if (score > random) {
-
-		losses ++
-
-		reset();
+});
 
 
-	} 
+	 
 
 
 	console.log(random);
@@ -92,33 +97,122 @@ $("#pink-crystal").on("click", function() {
 
 
 
-});	
+	
 
 
 $("#blue-crystal").on("click", function() {
 
 	score = bluePoints + score;
 
-	$("score").html(bluePoints + score);
+	$(".points-box").html(score);
 
 // if score === random, wins ++, reset
 
-	if (score === random) {
+	if (score > random) {
+
+		losses ++
+
+		reset();
+
+	}
+
+
+	else if	(score === random) {
 
 		wins ++
 
 		reset();
 	}
 
-	else if (score > random) {
+
+
+	});
+
+	console.log(bluePoints);
+
+
+$("#purple-crystal").on("click", function() {
+
+	score = purplePoints + score;
+
+	$(".points-box").html(score);
+
+// if score === random, wins ++, reset
+
+	if (score > random) {
 
 		losses ++
 
 		reset();
 
-	};
+	}
 
 
+	else if	(score === random) {
+
+		wins ++
+
+		reset();
+	}
+
+
+
+	});
+
+console.log(purplePoints);
+
+
+$("#green-crystal").on("click", function() {
+
+	score = greenPoints + score;
+
+	$(".points-box").html(score);
+
+// if score === random, wins ++, reset
+
+	if (score > random) {
+
+		losses ++
+
+		reset();
+
+	}
+
+
+	else if	(score === random) {
+
+		wins ++
+
+		reset();
+	}
+
+
+
+	});
+
+
+
+function reset() {
+
+	score = 0;
+
+	random = "";
+
+	pinkPoints = "";
+
+	bluePoints = "";
+
+	purplePoints = "";
+
+	greenPoints = "";
+
+	$("points-box").empty();
+
+	$("random").empty();
+
+	start();
+
+};
 
 
 
@@ -127,7 +221,12 @@ $("#blue-crystal").on("click", function() {
 
 
 
-});
+
+
+
+
+
+
 
 
 
@@ -214,25 +313,7 @@ $("#blue-crystal").on("click", function() {
 
 
 
-function reset() {
 
-	score = 0;
-
-	random = "";
-
-	pinkPoints = "";
-
-	bluePoints = "";
-
-	purplePoints = "";
-
-	greenPoints = "";
-
-	$("score").empty();
-
-	$("random").empty();
-
-};
 
 
 
