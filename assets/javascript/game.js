@@ -65,6 +65,14 @@ start();
 
 	$(".random").html(random);
 
+	score = 0;
+
+	$(".points-box").html(score);
+
+
+
+});
+
 
 
 
@@ -265,7 +273,7 @@ function reset() {
 
 });
 
-});
+
 
 
 
