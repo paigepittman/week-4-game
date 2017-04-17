@@ -1,8 +1,12 @@
 body {
 
 	background: linear-gradient(to bottom, #7DE0FE, #F5BAFB);
+
+	background-repeat: no-repeat;
 	
 	font-family: 'Poiret One', cursive;
+
+	height: 1000px;
 }
 
 .container {

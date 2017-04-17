@@ -102,6 +102,7 @@ $("#pink-crystal").on("click", function() {
 
 		reset();
 
+
 	}
 
 	else if (score === random) {
@@ -147,6 +148,8 @@ $("#blue-crystal").on("click", function() {
 
 		$("#losses").html(losses);
 
+		alert("You lost!");
+
 		reset();
 
 	}
@@ -182,6 +185,8 @@ $("#purple-crystal").on("click", function() {
 
 		$("#losses").html(losses);
 
+		alert("You lost!");
+
 		reset();
 
 	}
@@ -216,6 +221,8 @@ $("#green-crystal").on("click", function() {
 		losses ++
 
 		$("#losses").html(losses);
+
+		alert("You lost!");
 
 		reset();
 
@@ -261,7 +268,7 @@ function reset() {
 
 	greenPoints = "";
 
-	$("points-box").empty();
+	$("points-box").html(score);
 
 	$("random").empty();
 
