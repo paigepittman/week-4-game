@@ -47,27 +47,27 @@ function start() {
 
 	greenPoints = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	$(".random").html(random);
+	// $(".random").html(random);
 
 // assign those numbers to images 
 
 
 }
+
+
+
+
+$("button").on("click", function() {
+
 start();
 
 
 
-// $("button").on("click", function() {
+	$(".random").html(random);
 
 
 
 
-
-// 	$(".random").html(random);
-
-
-
-});
 
 
 
@@ -259,11 +259,17 @@ function reset() {
 
 	start();
 
+	$(".random").html(random);
+
 };
 
-
+});
 
 });
+
+
+
+
 
 
 
