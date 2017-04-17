@@ -30,8 +30,6 @@ var max = 12;
 
 var min = 1;
 
-gameStarted = false;
-
 
 function start() {
 
@@ -49,25 +47,31 @@ function start() {
 
 	greenPoints = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	
+	$(".random").html(random);
 
 // assign those numbers to images 
 
 
 }
-
 start();
 
 
-$("button").on("click", function() {
 
-	gameStarted = true;
+// $("button").on("click", function() {
 
-	$(".random").html(random);
+
+
+
+
+// 	$(".random").html(random);
 
 
 
 });
+
+
+
+
 
 
 $("#pink-crystal").on("click", function() {
@@ -86,12 +90,17 @@ $("#pink-crystal").on("click", function() {
 
 		losses ++
 
+		$("#losses").html(losses);
+
 		reset();
+
 	}
 
 	else if (score === random) {
 
 		wins ++
+
+		$("#wins").html(wins);
 
 		reset();
 	}
@@ -102,10 +111,12 @@ $("#pink-crystal").on("click", function() {
 	 
 
 
-	console.log(random);
-	console.log(losses);
-	console.log(pinkPoints);
-	console.log(score);
+	// console.log(random);
+	// console.log(losses);
+	// console.log(pinkPoints);
+	// console.log(score);
+	// console.log(wins);
+
 
 
 
@@ -126,6 +137,8 @@ $("#blue-crystal").on("click", function() {
 
 		losses ++
 
+		$("#losses").html(losses);
+
 		reset();
 
 	}
@@ -135,6 +148,8 @@ $("#blue-crystal").on("click", function() {
 
 		wins ++
 
+		$("#wins").html(wins);
+
 		reset();
 	}
 
@@ -142,7 +157,7 @@ $("#blue-crystal").on("click", function() {
 
 	});
 
-	console.log(bluePoints);
+	
 
 
 $("#purple-crystal").on("click", function() {
@@ -157,6 +172,8 @@ $("#purple-crystal").on("click", function() {
 
 		losses ++
 
+		$("#losses").html(losses);
+
 		reset();
 
 	}
@@ -166,6 +183,8 @@ $("#purple-crystal").on("click", function() {
 
 		wins ++
 
+		$("#wins").html(wins);
+
 		reset();
 	}
 
@@ -173,7 +192,7 @@ $("#purple-crystal").on("click", function() {
 
 	});
 
-console.log(purplePoints);
+
 
 
 $("#green-crystal").on("click", function() {
@@ -188,6 +207,8 @@ $("#green-crystal").on("click", function() {
 
 		losses ++
 
+		$("#losses").html(losses);
+
 		reset();
 
 	}
@@ -197,12 +218,24 @@ $("#green-crystal").on("click", function() {
 
 		wins ++
 
+		$("#wins").html(wins);
+
 		reset();
 	}
 
 
 
 	});
+
+
+console.log(random);
+console.log(pinkPoints);
+console.log(purplePoints);
+console.log(score);
+console.log(wins);
+console.log(losses);
+
+
 
 
 
