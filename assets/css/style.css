@@ -1,31 +1,44 @@
 body {
 
 	background: linear-gradient(to bottom, #7DE0FE, #F5BAFB);
+	
+	font-family: 'Poiret One', cursive;
 }
 
 .container {
 	margin-left: auto;
     margin-right: auto;
-    max-width: 700px;
+    max-width: 750px;
 
 }
+
+button {
+
+	position: relative;
+	left: 250px;
 }
 
 .title {
 	text-align: center;
 	margin-left: auto;
     margin-right: auto;
+    ;
 
 }
 
 h1 {
 	text-align: center;
+	font-family: 'Alice', serif;
+	font-size: 50px;
+
 }
 
 .rules {
 	padding: 30px;
 	margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
+   
 }
 
 
@@ -43,6 +56,9 @@ h1 {
 	padding: 20px;
 	position: relative;
 	left: 200px;
+	font-size: 30px;
+	
+
 }
 
 .wins-losses {
@@ -58,7 +74,8 @@ h1 {
 	width: 200px;
 	padding: 20px;
     position: relative;
-	left: 200px;
+	left: 150px;
+	font-size: 20px;
 }
 
 

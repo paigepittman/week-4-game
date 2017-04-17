@@ -22,13 +22,15 @@ var purplePoints = "";
 
 var greenPoints = "";
 
-var maxrand = 120
+var maxrand = 120;
 
-var minrand = 18
+var minrand = 18;
 
-var max = 12
+var max = 12;
 
-var min = 1
+var min = 1;
+
+gameStarted = false;
 
 
 function start() {
@@ -47,7 +49,7 @@ function start() {
 
 	greenPoints = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	$(".random").html(random);
+	
 
 // assign those numbers to images 
 
@@ -55,6 +57,18 @@ function start() {
 }
 
 start();
+
+
+$("button").on("click", function() {
+
+	gameStarted = true;
+
+	$(".random").html(random);
+
+
+
+});
+
 
 $("#pink-crystal").on("click", function() {
 
